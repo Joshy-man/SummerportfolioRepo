@@ -57,3 +57,14 @@ nav ul li a:hover::after{
     width: 100%;
 
 }
+.header-text {
+    margin-top: 13%;
+    font-size: 14px;
+}
+.header-text h1 {
+    font-size: 60;
+    margin-top: 20px;
+}
+.header-text h1 spam {
+    color: lightgreen;
+}
