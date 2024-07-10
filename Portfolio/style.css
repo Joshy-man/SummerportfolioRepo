@@ -135,3 +135,6 @@ margin: 10px;
 .tab-contents {
     display: none;
 }
+.tab-contents.active-tab {
+    display: block;
+}

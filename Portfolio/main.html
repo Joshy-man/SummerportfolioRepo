@@ -42,13 +42,13 @@
                        What inspired me to do coding were some of my favorite games like, and also my brother is someone who inspired me to do coding. </p>
 
                     <div class="tab-titles">
-                       <p class="tab-links active-link">Skills</p>
-                       <p class="tab-links">Personal story</p>
-                       <p class="tab-links">Goals</p>   
+                       <p class="tab-links active-link"onclick="OpenTab('Skills')">skills</p>
+                       <p class="tab-links"Personal story onclick="OpenTab('Personal story')">Personal story</p>
+                       <p class="tab-links" onclick="OpenTab('Goals')">Goals</p>
                     </div> 
 
                     <!--Skills-->
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="Skills">
                         <ul>
                             <li><span>Game developer</span><br>Engineering games</li>
                             <li><span>Good at chess</span><br> Strategy games </li>
@@ -56,8 +56,8 @@
                         </ul>
                     </div>
 
-                    <!--Experience-->
-                    <div class="tab-contents">
+                    <!--PERSONAL STORY-->
+                    <div class="tab-contents" id="Personal story">
                         <ul>
                             <li><span>Game developer</span><br>Engineering games</li>
                             <li><span>Good at chess</span><br> Strategy games </li>
@@ -65,8 +65,8 @@
                         </ul>
                     </div>
 
-                    <!--EDUCATION-->
-                    <div class="tab-contents">
+                    <!--GOALS-->
+                    <div class="tab-contents" id="Goals">
                         <ul>
                             <li><span>Game developer</span><br>Engineering games</li>
                             <li><span>Good at chess</span><br> Strategy games </li>
@@ -79,5 +79,36 @@
     </div>
                                              
     </div>
+ <!--A Variable is a name that is stored inside data-->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function OpenTab(tabName) 
+        {
+            /* For each link in the variable "tab-links" there are 3 of them */
+            for(Tablink of Tablinks){
+            
+                /* Remove the class 'active-link' from the tab */
+                tablink.classList.remove("active-link");
+
+            }
+
+            /* For each tab link in the variable "tab-links" there are 3 of them */
+            for(tabcontent of tabcontents){
+            
+                /* Remove the class 'active-tab' from the tag */
+                tabcontent.classList.remove("active-tab");
+
+            }
+            /* Take the selected tag title,
+            then adds the active-link class to it to make its contents show up on page */
+            event.currentTarget.classList.add("active-link");
+            document.getElementsByClassName(tabName).classList.add("active-tab")
+
+        }
+        
+    </script>
+
 </body>
 </html>
