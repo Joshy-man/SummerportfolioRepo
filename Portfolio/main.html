@@ -32,7 +32,7 @@
             <div class="row">
 
                 <div class="about-col-1">
-                    <img src="images/Photo on 7-8-24 at 11.00 AM.jpg" alt="headshot of me">
+                    <img src="images/screenshot_20240709_165515_gallery_360.jpg" alt="headshot of me">
                 </div>
 
                 <div class="about-col-2">
@@ -43,7 +43,7 @@
 
                     <div class="tab-titles">
                        <p class="tab-links active-link"onclick="OpenTab('Skills')">skills</p>
-                       <p class="tab-links"Personal story onclick="OpenTab('Personal story')">Personal story</p>
+                       <p class="tab-links" onclick="OpenTab('Personal story')">Personal story</p>
                        <p class="tab-links" onclick="OpenTab('Goals')">Goals</p>
                     </div> 
 
@@ -59,18 +59,18 @@
                     <!--PERSONAL STORY-->
                     <div class="tab-contents" id="Personal story">
                         <ul>
-                            <li><span>Game developer</span><br>Engineering games</li>
-                            <li><span>Good at chess</span><br> Strategy games </li>
-                            <li><span>Game developer</span><br>Engineering games</li>
+                            <li><span>Have four siblings</span><br> Family of seven total</li>
+                            <li><span>My school</span><br> Hercules High school </li>
+                            <li><span>Inspiration</span><br>My brother encouraged me to do coding, and was always found coding significant</li>
                         </ul>
                     </div>
 
                     <!--GOALS-->
                     <div class="tab-contents" id="Goals">
                         <ul>
-                            <li><span>Game developer</span><br>Engineering games</li>
-                            <li><span>Good at chess</span><br> Strategy games </li>
-                            <li><span>Game developer</span><br>Engineering games</li>
+                            <li><span> want to do game designing</span><br>Engineer games</li>
+                            <li><span>Want to animate</span><br> Animate </li>
+                            <li><span>Be better with my money</span><br>Become fina</li>
                         </ul>
                     </div>
             </div>
@@ -78,6 +78,17 @@
             
     </div>
                                              
+    </div>
+    <!---Services-->
+    <div id="services">
+        <div class="container">
+        <h1 class="sub-title"> My services</h1>
+        <div class="services-list">
+            <div>
+                <h2>  </h2>
+            </div>
+        </div>
+        </div>
     </div>
  <!--A Variable is a name that is stored inside data-->
     <script>
@@ -87,7 +98,7 @@
         function OpenTab(tabName) 
         {
             /* For each link in the variable "tab-links" there are 3 of them */
-            for(Tablink of Tablinks){
+            for(tablink of tablinks){
             
                 /* Remove the class 'active-link' from the tab */
                 tablink.classList.remove("active-link");
@@ -104,7 +115,7 @@
             /* Take the selected tag title,
             then adds the active-link class to it to make its contents show up on page */
             event.currentTarget.classList.add("active-link");
-            document.getElementsByClassName(tabName).classList.add("active-tab")
+            document.getElementById(tabName).classList.add("active-tab");
 
         }
         
