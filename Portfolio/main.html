@@ -6,192 +6,195 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/d2e5ff1e27.js" crossorigin="anonymous"></script>
+    <style>
+        /* Inline CSS for demonstration, ideally move to style.css */
+
+        /* Flexbox adjustments for contact section */
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-left, .contact-right {
+            flex: 1;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1> my portfolio </h1>
-    <div id= "header">
-    <div class="container">
-<nav>
-    <img src="images/THGP_Logo.png" class="logo" alt="THGP Logo">
-    <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Portfolio</a></li>
-    <li><a href="#">Contact</a></li>
-</nav>
-<div class="header-text">
-<p>Game Developer</p>
-<h1>Hello, My Name is <spam>Joshua Ware</spam><br> from Hercules, CA!</h1>
-</div>
+    <h1>My Portfolio</h1>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/THGP_Logo.png" class="logo" alt="THGP Logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Game Developer</p>
+                <h1>Hello, My Name is <span>Joshua Ware</span><br> from Hercules, CA!</h1>
+            </div>
+        </div>
     </div>
-    </div>
-    <!----------About section---------->
+
+    <!-- About section -->
     <div id="about">
         <div class="container">
-
             <div class="row">
-
                 <div class="about-col-1">
-                    <img src="images/screenshot_20240709_165515_gallery_360.jpg" alt="headshot of me">
+                    <img src="images/screenshot_20240709_165515_gallery_360.jpg" alt="Headshot of me">
                 </div>
-
                 <div class="about-col-2">
-                    <h1 class="sub-title"> About me</h1> 
-                    <p>I was born and raised in Hercules.
-                      I was raised with my parents and have three siblings. My passion is to become a game developer.
-                       What inspired me to do coding were some of my favorite games like, and also my brother is someone who inspired me to do coding. </p>
-
+                    <h1 class="sub-title">About me</h1>
+                    <p>I was born and raised in Hercules. I was raised with my parents and have three siblings. My passion is to become a game developer. What inspired me to do coding were some of my favorite games like, and also my brother is someone who inspired me to do coding.</p>
                     <div class="tab-titles">
-                       <p class="tab-links active-link"onclick="OpenTab('Skills')">skills</p>
+                       <p class="tab-links active-link" onclick="OpenTab('Skills')">Skills</p>
                        <p class="tab-links" onclick="OpenTab('Personal story')">Personal story</p>
                        <p class="tab-links" onclick="OpenTab('Goals')">Goals</p>
                     </div> 
 
-                    <!--Skills-->
+                    <!-- Skills -->
                     <div class="tab-contents active-tab" id="Skills">
                         <ul>
                             <li><span>Game developer</span><br>Engineering games</li>
-                            <li><span>Good at chess</span><br> Strategy games </li>
+                            <li><span>Good at chess</span><br>Strategy games</li>
                             <li><span>Game developer</span><br>Engineering games</li>
                         </ul>
                     </div>
 
-                    <!--PERSONAL STORY-->
+                    <!-- PERSONAL STORY -->
                     <div class="tab-contents" id="Personal story">
                         <ul>
-                            <li><span>Have four siblings</span><br> Family of seven total</li>
-                            <li><span>My school</span><br> Hercules High school </li>
+                            <li><span>Have four siblings</span><br>Family of seven total</li>
+                            <li><span>My school</span><br>Hercules High school</li>
                             <li><span>Inspiration</span><br>My brother encouraged me to do coding, and was always found coding significant</li>
                         </ul>
                     </div>
 
-                    <!--GOALS-->
+                    <!-- GOALS -->
                     <div class="tab-contents" id="Goals">
                         <ul>
-                            <li><span> want to do game designing</span><br>Engineer games</li>
-                            <li><span>Want to be better at animating</span><br> Animate </li>
+                            <li><span>Want to do game designing</span><br>Engineer games</li>
+                            <li><span>Want to be better at animating</span><br>Animate</li>
                             <li><span>Be better with my money</span><br>Become fina</li>
                         </ul>
                     </div>
+                </div>
             </div>
+        </div>
+    </div>
 
-            
-    </div>
-                                             
-    </div>
-    <!---Services-->
+    <!-- Services -->
     <div id="services">
         <div class="container">
-        <h1 class="sub-title"> What I want to do</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-gamepad"></i>
-                <h2> Game designing </h2>
-                <p> The reason why I want to do game designing is because I always found
-                    video games interesting, and took inspiration from my brother.</p>
+            <h1 class="sub-title">What I want to do</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h2>Game designing</h2>
+                    <p>The reason why I want to do game designing is because I always found video games interesting, and took inspiration from my brother.</p>
                     <a href="Learn more"></a>
-            </div>
-            <div>
-                <i class="fa-solid fa-vr-cardboard"></i>
-                <h2> Game developing </h2>
-                <p> The reason why I want to do game designing is because I always found
-                    video games interesting, and took inspiration from my brother.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-vr-cardboard"></i>
+                    <h2>Game developing</h2>
+                    <p>The reason why I want to do game designing is because I always found video games interesting, and took inspiration from my brother.</p>
                     <a href="Learn more"></a>
-            </div>
-            <div>
-                <i class="fa-solid fa-pen"></i>
-                <h2> Animating </h2>
-                <p> The reason why I want to do game designing is because I always found
-                    video games interesting, and took inspiration from my brother.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-pen"></i>
+                    <h2>Animating</h2>
+                    <p>The reason why I want to do game designing is because I always found video games interesting, and took inspiration from my brother.</p>
                     <a href="Learn more"></a>
+                </div>
             </div>
-        </div>
         </div>
     </div>
-    <!--Portfolio-->
+
+    <!-- Portfolio -->
     <div id="portfolio">
         <div class="container">
-            <h1 class="sub-title"> My Work</h1>
+            <h1 class="sub-title">My Work/Hobbies</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="images/Drawing.jpeg">
+                    <img src="images/Drawing.jpeg" alt="Animating">
                     <div class="layer">
-                        <h3> Animating </h3>
-                        <p>I've always used animations in silly ways,
-                            like making short little funny clips, however, I do wish to improve in animating </p>
-                            <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+                        <h3>Animating</h3>
+                        <p>I've always used animations in silly ways, like making short little funny clips, however, I do wish to improve in animating</p>
+                        <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="images/Game-2.jpeg">
+                    <img src="images/Game-2.jpeg" alt="Drawing">
                     <div class="layer">
-                        <div class="layer">
-                            <h3> Drawing </h3>
-                            <p>I've always used animations in silly ways,
-                                like making short little funny clips, however, I do wish to improve in animating </p>
-                                <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
-                        </div>
-                    </div>
-                </div> 
-                <div class="work">
-                    <img src="images/Chess-1.jpeg">
-                    <div class="layer">
-                        <div class="layer">
-                            <h3> Play Chess </h3>
-                            <p>I've always used animations in silly ways,
-                                like making short little funny clips, however, I do wish to improve in animating </p>
-                                <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
-                        </div>
+                        <h3>Drawing</h3>
+                        <p>I've always used animations in silly ways, like making short little funny clips, however, I do wish to improve in animating</p>
+                        <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
                     </div>
                 </div>
-                <a href="#" class="btn"> See more</a>
-<!--Contact-->
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <div class="contact-right">
-                    <h1 class="sub-title"> </h1>
-                    <p> joshua72995@gmail.com</p>
-                    <p>510-385-3223</p>
-                    <div class="social-icons">
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>   
+                <div class="work">
+                    <img src="images/Chess-1.jpeg" alt="Play Chess">
+                    <div class="layer">
+                        <h3>Play Chess</h3>
+                        <p>I've always used animations in silly ways, like making short little funny clips, however, I do wish to improve in animating</p>
+                        <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+                    </div>
+                </div>
+                <a href="#" class="btn">See more</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-container">
+                    <div class="contact-left">
+                        <h1 class="sub-title">My contacts</h1>
+                        <p><i class="fa-solid fa-arrow-up-right-from-square"></i> joshua72995@gmail.com</p>
+                        <p><i class="fa-solid fa-mobile-screen"></i> 510-385-3223</p>
+                        <div class="social-icons">
+                            <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your name" required>
+                            <input type="email" name="email" placeholder="Your email" required>
+                            <textarea name="message" rows="6" placeholder="Your message"></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
- <!--A Variable is a name that is stored inside data-->
+
+    <!-- JavaScript for tab functionality -->
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
 
-        function OpenTab(tabName) 
-        {
-            /* For each link in the variable "tab-links" there are 3 of them */
-            for(tablink of tablinks){
-            
-                /* Remove the class 'active-link' from the tab */
+        function OpenTab(tabName) {
+            for (tablink of tablinks) {
                 tablink.classList.remove("active-link");
-
             }
 
-            /* For each tab link in the variable "tab-links" there are 3 of them */
-            for(tabcontent of tabcontents){
-            
-                /* Remove the class 'active-tab' from the tag */
+            for (tabcontent of tabcontents) {
                 tabcontent.classList.remove("active-tab");
-
             }
-            /* Take the selected tag title,
-            then adds the active-link class to it to make its contents show up on page */
+
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabName).classList.add("active-tab");
-
         }
-        
     </script>
 
 </body>
