@@ -327,6 +327,32 @@ form .btn2 {
     margin-top: -10px;
     display: block;
 }
+/* Add these styles to your existing CSS */
 #example {
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.slider-frame {
+    overflow: hidden;
+    height: 100px;
+    width: 120px;
+    margin-left: 360px;
+    margin-top: 20px;
+}
+/* Slide animation */
+@-webkit-keyframes slide_animation {
+    0% {left: 0px;}
+    10% {left: 0px;}
+    20% {left: 120px;}
+    30% {left: 120px;}
+    40% {left: 240px;}
+    50% {left: 240px;}
+    60% {left: 120px;}
+    70% {left: 120px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left: 0px;}
+}
+.slide-images {
     
 }
