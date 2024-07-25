@@ -323,36 +323,55 @@ form .btn2 {
     margin-top: 20px;
 }
 #msg {
-    color: #61b752;
+    color: lightgreen;
     margin-top: -10px;
     display: block;
 }
 /* Add these styles to your existing CSS */
 #example {
-    margin-top: 50px;
-    margin-left: 100px;
+    height: 100vh;
+    align-items: center;
+    align-items: center;
 }
-.slider-frame {
+.slider {
+    position: relative;
+    width: 100%;
     overflow: hidden;
-    height: 100px;
-    width: 120px;
-    margin-left: 360px;
-    margin-top: 20px;
 }
-/* Slide animation */
-@-webkit-keyframes slide_animation {
-    0% {left: 0px;}
-    10% {left: 0px;}
-    20% {left: 120px;}
-    30% {left: 120px;}
-    40% {left: 240px;}
-    50% {left: 240px;}
-    60% {left: 120px;}
-    70% {left: 120px;}
-    80% {left: 0px;}
-    90% {left: 0px;}
-    100% {left: 0px;}
+.images {
+    display: flex;
+    width: 100%;
 }
-.slide-images {
-    
+.images img {
+    height: 250px;
+    width: 250%;
+    transition: all 0.15s ease;
+}
+.images input{
+    display: none;
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.dots label {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+.dots label:hover {background: white;}
+
+#img1:checked .m1{
+    margin-left: 0;
+}
+#img2:checked .m2{
+    margin-left: -100%;
+}
+#img3:checked .m3{
+    margin-left: -200%;
 }
