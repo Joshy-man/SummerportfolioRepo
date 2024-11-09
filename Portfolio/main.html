@@ -22,9 +22,16 @@
             padding: 20px;
         }
     </style>
+    <title>Dark Mode App</title>
+
+    <title>Button counter</title>
 </head>
 <body>
+    
+    <button onclick="darkMode()">Toggle Dark Mode</button>
     <h1>My Portfolio</h1>
+    <button id="myButton">Click me</button>
+    <div id="myCount">0</div>
     <div id="header">
         <div class="container">
             <nav>
@@ -53,7 +60,7 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About me</h1>
-                    <p>I was born and raised in Hercules. I was raised with my parents and have three siblings. My passion is to become a game developer. What inspired me to do coding were some of my favorite games like, and also my brother is someone who inspired me to do coding.</p>
+                    <p>I was born and raised in Hercules. I was raised with my parents and have three siblings. My passion is to become a game developer. What inspired me to do coding were some of my favorite games like rpg games. Also my brother is someone who inspired me to do coding.</p>
                     <div class="tab-titles">
                        <p class="tab-links active-link" onclick="OpenTab('Skills')">Skills</p>
                        <p class="tab-links" onclick="OpenTab('Personal story')">Personal story</p>
@@ -132,7 +139,7 @@
                     </div>
                 </div>
                 <div class="work">
-                    <img src="images/Game-2.jpeg" alt="Drawing">
+                    <img src="images/Kirby.jpg" alt="Drawing">
                     <div class="layer">
                         <h3>Drawing</h3>
                         <p>Something I've been pretty decent at is drawing, and it's just something I find enjoyable at times.</p>
@@ -156,9 +163,9 @@
                         <input type="radio" name="slide" id="img1" checked>
                         <input type="radio" name="slide" id="img2">
                         <input type="radio" name="slide" id="img3">
-                        <img src="images/kirby.png" class="m1" alt="img1">
-                        <img src="images/sky.jpeg" class="m2" alt="img2">
-                        <img src="images/city.jpeg" class="m3" alt="img3">
+                        <img src="images/pixelated kirby.png" class="m1" alt="img1">
+                        <img src="images/pixelated pug.jpg" class="m2" alt="img2">
+                        <img src="images/DrawingOfFriend.jpg" class="m3" alt="img3">
                         </div>
                         <div class="dots">
                             <label for="img1"></label>
@@ -206,9 +213,16 @@
 
     <!-- JavaScript for tab functionality -->
     <script>
+         document.getElementById("myButton").addEventListener("click", myBtn);
+        let count = 0;
+        let countEl = document.getElementById("myCount");
+        src="script.js"
+        function myBtn(){
+            count = count + 1;
+            countEl.innerText = count;}
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
-
+    
         function OpenTab(tabName) {
             for (tablink of tablinks) {
                 tablink.classList.remove("active-link");
@@ -235,7 +249,13 @@
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
+        .then(response => {
+            msg.innerHTML ="Message sent successfully"
+            setTimeout(function (){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
         .catch(error => console.error('Error!', error.message))
     })
   </script>
